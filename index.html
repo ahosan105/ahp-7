@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title> JS problem solving </title>
+    <title>JS problem solving</title>
 </head>
 <body>
+    <!-- Write a letter to your foreign friend describing the father of the nation (200 words)
+Submission 24th March -->
+
     <center>
     
     <h1>ক্ষেএফল নির্ণয়</h1>
@@ -19,8 +22,16 @@
         <button class="btn btn-success" onclick="btn()">Result</button><br><br>
     ক্ষেএফল= <input id="fore" type="number" placeholder="দৈর্ঘ্য x প্রস্থ">
     </h3><br><hr>
-<button class="btn btn-success" onclick="print_page()">Print</button>
+<p>Print the page:click the button</p><button class="btn btn-success" onclick="print_page()">Print</button>
 <hr><br><br>
+     
+<h2>Temperature Converter</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+  <p>Fahrenheit:</p>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureResult(this.value)" onchange="temperatureResult(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+<br><br>
     <h1>বীজগণিত</h1>
    <h2>মান নির্ণয়</h2> 
     <h3>
@@ -49,6 +60,11 @@
    function print_page()
 {
 window.print();
+}
+
+function temperatureResult(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
 }
 
    function math(){
